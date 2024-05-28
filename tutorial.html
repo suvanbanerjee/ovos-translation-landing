@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Class-less preview • Pico CSS</title>
+    <meta name="description" content="A class-less example, without dependencies." />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.classless.min.css" />
+</head>
+
+<body style=" max-width: 90%; margin: 0 auto; padding: 1rem;">
+    <h2 id="contribute-to-our-project-translations-with-gitlocalize-">Contribute to Our Project Translations with
+        GitLocalize!</h2>
+    <h3 id="welcome-and-thank-you-">Welcome and Thank You!</h3>
+    <p>Thank you for your interest in helping translate our project! Your contributions will help make our project
+        accessible to more people around the world. We’ve made it easy for you to get started, even if you’re not
+        familiar with GitHub or coding. Follow the steps below to join our translation effort using GitLocalize.</p>
+    <h3 id="step-by-step-guide-to-translating-with-gitlocalize">Step-by-Step Guide to Translating with GitLocalize</h3>
+    <h4 id="visit-our-gitlocalize-project-page">Visit Our GitLocalize Project Page</h4>
+    <p><img src="https://gist.github.com/assets/33701864/0a678e87-2cdf-4a9b-924c-e496e47befb4" alt="image"></p>
+    <ol>
+        <li><strong>Click on the link</strong> to our GitLocalize project: <a
+                href="https://gitlocalize.com/users/OpenVoiceOS">https://gitlocalize.com/users/OpenVoiceOS</a></li>
+        <li>You will see a list of OVOS repositories to translate, select one</li>
+        <li>You will see a list of languages and translation tasks available.</li>
+    </ol>
+    <p><img src="https://gist.github.com/assets/33701864/c3770638-1452-44fb-ada1-39e39683aea8" alt="image"></p>
+    <h4 id="sign-up-or-log-in">Sign Up or Log In</h4>
+    <ol>
+        <li>If you don’t have an account, <strong>sign up</strong> with your email or GitHub account (you don’t need to
+            know GitHub to do this!).</li>
+        <li>If you already have an account, simply <strong>log in</strong>.</li>
+    </ol>
+    <h4 id="choose-a-language">Choose a Language</h4>
+    <blockquote>
+        <p>Adding new languages to the list is a manual process, if your language is unlisted let us know!</p>
+    </blockquote>
+    <ol>
+        <li>Select the language you want to translate into from the list of available languages.</li>
+        <li>You will see a list of files that need translation. <ul>
+                <li><code>dialogs.json</code> contains sentences that OVOS will speak</li>
+                <li><code>intents.json</code> contains sentences that the user will speak to OVOS</li>
+                <li><code>vocabs.json</code> similar to intents, but contain sentence fragments/keywords, not full
+                    utterances</li>
+            </ul>
+        </li>
+    </ol>
+    <p><img src="https://gist.github.com/assets/33701864/444cbb6d-1e9e-47b0-84f1-aeb38eef6a17" alt="image"></p>
+    <h4 id="start-translating">Start Translating</h4>
+    <ol>
+        <li>Click on a file that you want to translate.</li>
+        <li>The translation editor will open. Here, you’ll see the original text on the left and a space to enter your
+            translation on the right.</li>
+        <li>Begin translating the text. If you’re unsure about any phrase, feel free to leave it and move on to the next
+            one.</li>
+    </ol>
+    <p>When you open a JSON file for translation in GitLocalize, you’ll see two parts:</p>
+    <ul>
+        <li><strong>Key</strong>: This corresponds to a file name in the OVOS repository you selected.</li>
+        <li><strong>Value</strong>: This is the sentence you need to translate.</li>
+    </ul>
+    <h4 id="variables">Variables</h4>
+    <p>Variables are placeholders within sentences that represent changing content, such as names or numbers. </p>
+    <ul>
+        <li>Original: <code>My name is {var_name}</code></li>
+        <li>Translation: <code>Mi nombre es {var_name}</code></li>
+    </ul>
+    <p><img src="https://gist.github.com/assets/33701864/2779c8a3-46de-47b3-894f-eccab0bdd2b5" alt="image"></p>
+    <p><strong>Important Rules</strong>:</p>
+    <ul>
+        <li><strong>Do not translate the variable names</strong> (the text inside curly braces <code>{}</code>).</li>
+        <li>You can <strong>rearrange the position</strong> of variables in your translation, but do not create new
+            variables.</li>
+        <li>Ensure that variables are not separated by only whitespace; there should be at least one word between them.
+        </li>
+    </ul>
+    <h4 id="slots">Slots</h4>
+    <p>Sometimes, the same file will appear several times, each with a different variation of the same sentence. These
+        variations are called &quot;slots&quot;. </p>
+    <p><img src="https://gist.github.com/assets/33701864/70f30bc5-56f0-4d87-a521-2c4c77790bfe" alt="image"></p>
+    <p><strong>Important Rules</strong>:</p>
+    <ul>
+        <li><strong>Translate at least one slot</strong> in each file.</li>
+        <li>If a slot is not needed in your language, enter <code>[UNUSED]</code>. This tells us that you reviewed the
+            slot and marked it as translated.</li>
+        <li>If you run out of slots to fit all variations of a sentence, you can use newlines to add more translations.
+        </li>
+    </ul>
+    <p><img src="https://gist.github.com/assets/33701864/c70379ef-ef29-484d-a6fb-84d9fca47660" alt="image"></p>
+    <h4 id="alternative-optional-words">Alternative/Optional words</h4>
+    <p>You can use the &quot;alternative word&quot; syntax to provide options or optional words within a sentence.</p>
+    <ul>
+        <li>Alternative words: <code>I love (cats|dogs|birds)</code> becomes <code>Amo (gatos|perros|pájaros)</code>
+        </li>
+        <li>Optional words: <code>I (really|) love (cats|dogs|birds)</code> becomes
+            <code>Yo (realmente|) amo (gatos|perros|pájaros)</code>
+        </li>
+    </ul>
+    <p><img src="https://gist.github.com/assets/33701864/75288b2d-559e-47c3-8e73-bb5391e4a888" alt="image"></p>
+    <h3 id="tips-for-effective-translation">Tips for Effective Translation</h3>
+    <ul>
+        <li><strong>Consistency</strong>: Try to use consistent terminology throughout the project.</li>
+        <li><strong>Context</strong>: If a phrase seems unclear, consider the overall context of the project or reach
+            out for clarification.</li>
+        <li><strong>Accuracy</strong>: Aim to convey the meaning as accurately as possible, rather than a literal
+            word-for-word translation.</li>
+    </ul>
+    <h4 id="key-take-aways">Key Take Aways</h4>
+    <ul>
+        <li>For each sentence (slot), enter your translation.</li>
+        <li>If a slot is not needed, enter <code>[UNUSED]</code>.</li>
+        <li>Leave the variable names in curly braces <code>{}</code> unchanged.</li>
+        <li>Rearrange variables as needed but do not create new ones.</li>
+        <li>Provide multiple options using the syntax <code>(option1|option2|option3)</code>.</li>
+        <li>Include optional words using the syntax <code>(optional|)</code>.</li>
+        <li>If there are not enough slots, press <code>Enter</code> to add a new line and enter your alternative
+            translation on the new line.</li>
+    </ul>
+    <h4 id="review-and-feedback">Review and Feedback</h4>
+    <ol>
+        <li>Once finished translating a file, you can <strong>submit</strong> it for review.</li>
+        <li>Your translations will be reviewed by other native speakers and project maintainers.</li>
+        <li>If any changes are needed, you might receive feedback. Simply log back in, review the comments, and make the
+            necessary adjustments.
+            <img src="https://gist.github.com/assets/33701864/f76df4fb-a825-48ec-8e76-c8e47e013392" alt="image">
+        </li>
+    </ol>
+
+    <h3 id="need-help-">Need Help?</h3>
+    <p>If you have any questions or need assistance at any point:</p>
+    <ul>
+        <li><strong>Join our Matrix chat</strong>: <a
+                href="https://matrix.to/#/#openvoiceos-languages:matrix.org">https://matrix.to/#/#openvoiceos-languages:matrix.org</a>
+        </li>
+        <li><strong>Email us</strong>: support@openvoiceos.org</li>
+    </ul>
+    <h3 id="thank-you-">Thank You!</h3>
+    Your contributions are invaluable, and we appreciate your effort in helping us reach a global audience.
+    Happy translating!
+
+
+</body>
+
+</html>
